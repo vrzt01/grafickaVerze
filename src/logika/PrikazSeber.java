@@ -52,32 +52,33 @@ public class PrikazSeber implements IPrikaz
         String vracenyText = null;
 
         if(parametry.length == 0){        
-            vracenyText = "Co chceš sebrat?";
+            vracenyText = "Co hces sebrat?";
         } else {                                   
 
             if(sbiranaVec == null){
-                vracenyText = "Tato věc tu není nebo nemůžeš sebrat tento objekt.";
+                vracenyText = "Tato vec tu neni nebo nemuzes sebrat tento objekt.";
             } else { 
-                if(aktualni.getNazev().equals("půda") && aktualni.ziskejPostavu("ghůl").getAgresivni()){
-                    aktualni.ziskejPostavu("ghůl").setKonec(true);
-                    vracenyText ="Sežral tě agresivní a hladový ghůl";
+                if(aktualni.getNazev().equals("puda") && aktualni.ziskejPostavu("ghul").getAgresivni()){
+                    aktualni.ziskejPostavu("ghul").setKonec(true);
+                    vracenyText ="Sezral te agresivni a hladovy ghul";
                 }
                 else{
                     if(sbiranaVec.jePrenositelna()){ 
                         if (batoh.velikostBatohu() < 6) {
-                            vracenyText = "Sebráno do batohu!\n";
-                            batoh.vlozVecDoBatohu(sbiranaVec);                                             
+                            vracenyText = "Sebrano do batohu!\n";
+                            batoh.vlozVecDoBatohu(sbiranaVec); batoh.upozorniPozorovatele();
+                            plan.upozorniPozorovatele();                           
                         } else { 
-                            vracenyText = "Batoh je plný!";
+                            vracenyText = "Batoh je plny!";
                         }
 
                     } else{
                         aktualni.vlozVec(sbiranaVec);
-                        vracenyText = "To se nedá nést sebou.";
+                        vracenyText = "To se neda nest sebou.";
                     }    
                 }
             }            
-        }
+        }        
         return vracenyText;
     }
     //== Nesoukromé metody (instancí i třídy) ======================================

@@ -11,7 +11,7 @@ package logika;
  */
 public class PrikazOdhod implements IPrikaz
 {
-    private static final String NAZEV = "odhoď";
+    private static final String NAZEV = "odhod";
     private HerniPlan plan;
     private Batoh batoh;
     //== Konstruktory a tovární metody =============================================
@@ -43,7 +43,7 @@ public class PrikazOdhod implements IPrikaz
         Prostor aktualni = plan.getAktualniProstor();  
         
         if(parametry.length == 0){        
-            vracenyText = "Co chceš odhodit?";
+            vracenyText = "Co chces odhodit?";
         } 
         if (parametry.length == 1) {
             nazevOdhazovaneVeci = parametry[0];           
@@ -56,23 +56,25 @@ public class PrikazOdhod implements IPrikaz
         }
 
         if(parametry.length != 0){ 
-            if(nazevOdhazovaneVeci.equals("šunka") && aktualni.getNazev().equals("půda")){      
+            if(nazevOdhazovaneVeci.equals("sunka") && aktualni.getNazev().equals("puda")){      
             Vec odhazovanaVec = batoh.odeberVecZBatohu(nazevOdhazovaneVeci);
             aktualni.vlozVec(odhazovanaVec);
-            aktualni.ziskejPostavu("ghůl").setAgresivni(false);
-            vracenyText = "Ghůl je zaměstnán žraním šunky.";
+            aktualni.ziskejPostavu("ghul").setAgresivni(false);
+            vracenyText = "Ghul je zamestnan zranim sunky.";
             }
             else{
                 if (batoh.ziskejVec(nazevOdhazovaneVeci) instanceof Vec) {
                     aktualni = plan.getAktualniProstor();        
-                    Vec odhazovanaVec = batoh.odeberVecZBatohu(nazevOdhazovaneVeci);
-                    aktualni.vlozVec(odhazovanaVec);
-                    vracenyText = "Ze svého batohu jsi odhodil věc | " + nazevOdhazovaneVeci + " | do prostoru | " + aktualni.getNazev();
+                    Vec odhazovanaVec = batoh.odeberVecZBatohu(nazevOdhazovaneVeci);                    
+                    aktualni.vlozVec(odhazovanaVec);   
+                    batoh.upozorniPozorovatele();
+                    plan.upozorniPozorovatele();
+                    vracenyText = "Ze sveho batohu jsi odhodil vec | " + nazevOdhazovaneVeci + " | do prostoru | " + aktualni.getNazev();
                 } else {
-                    vracenyText = "Neodhazuješ věc, nebo věc, kterou chceš odhodit, není v batohu.";
+                    vracenyText = "Neodhazujes vec, nebo vec, kterou chces odhodit, neni v batohu.";
                 }   
             }
-        }
+        }        
         return vracenyText;
     }
 

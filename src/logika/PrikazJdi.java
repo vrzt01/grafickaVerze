@@ -49,7 +49,7 @@ class PrikazJdi implements IPrikaz {
             return "Tam se odsud jit neda!";
         }
         else {
-            if (sousedniProstor.getNazev().equals("východ")) {
+            if (sousedniProstor.getNazev().equals("vychod")) {
                 return "Pro vychod musis vychod odemknout.";
 
             } else {

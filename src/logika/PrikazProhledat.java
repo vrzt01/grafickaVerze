@@ -60,7 +60,7 @@ public class PrikazProhledat implements IPrikaz
         } 
         if(parametry.length != 0)
         {
-            if(nazevProhledavaneVeci.equals("papírek s nápovědou")){
+            if(nazevProhledavaneVeci.equals("help")){
                 prohledavanaVec = batoh.ziskejVec(nazevProhledavaneVeci);
             }
             else{
@@ -68,28 +68,30 @@ public class PrikazProhledat implements IPrikaz
             }
         }
         if (parametry.length == 0){        
-            vracenyText =  "Co mám prohledat?";
+            vracenyText =  "Co mam prohledat?";
         }
         else{
             if (prohledavanaVec instanceof Vec) {
 
                 if (prohledavanaVec.jeProhledatelna()) {
-                    vracenyText = "Ve věci "+prohledavanaVec.getNazev()+" jsi našel: ";
+                    vracenyText = "Ve veci "+prohledavanaVec.getNazev()+" jsi nasel: ";
                     for(String nazevSchovaneVeci: prohledavanaVec.getSchovaneVeci().keySet()){
                         vracenyText += nazevSchovaneVeci+", ";
-                        aktualni.vlozVec(prohledavanaVec.getSchovaneVeci().get(nazevSchovaneVeci));
-                    }
+                        batoh.vlozVecDoBatohu(prohledavanaVec.getSchovaneVeci().get(nazevSchovaneVeci)); 
+                        batoh.upozorniPozorovatele();
+                        plan.upozorniPozorovatele();
+                    }                    
                 } else {
-                    vracenyText =  "Tato věc se nedá prohledat!";                        
+                    vracenyText =  "Tato vec se neda prohledat!";                        
                 }
 
             } 
             else {
-                vracenyText = "Můžeš prohledat pouze věc!";
+                vracenyText = "Muzes prohledat pouze vec!";
             }
         }
         if (parametry.length > 3) { 
-            vracenyText =  "Nemusíš zadávat tolik parametrů.";
+            vracenyText =  "Nemusis zadavat tolik parametru.";
         }                                                                         
         return vracenyText;
     }

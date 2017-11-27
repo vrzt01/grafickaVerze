@@ -1,4 +1,4 @@
-package logika;
+   package logika;
 import java.util.*;
 /**
  *  Třída Hra - třída představující logiku adventury.
@@ -28,10 +28,10 @@ public class Hra implements IHra {
      */
     public Hra() {
         pocetPokusu = 6;
-        kod1 = random(50, 74);
-        kod2 = random(10, 24);
-        kod3 = random(25, 49);
-        kod4 = random(75, 99);
+        kod1 = 32;
+        kod2 = 59;
+        kod3 = 81;
+        kod4 = 47;
         celyKod = Integer.toString(kod1)+Integer.toString(kod2)+Integer.toString(kod3)+Integer.toString(kod4);
         herniPlan = new HerniPlan(kod1,kod2,kod3,kod4);
         

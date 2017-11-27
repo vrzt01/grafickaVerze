@@ -58,4 +58,6 @@ public interface IHra
     
     //== ZDĚDĚNÉ METODY ========================================================
     //== INTERNÍ DATOVÉ TYPY ===================================================
+
+    public Batoh getBatoh();
 }

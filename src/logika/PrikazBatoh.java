@@ -37,7 +37,7 @@ public class PrikazBatoh implements IPrikaz
      */ 
     public String proved(String... parametry){
         if (parametry.length >= 1) {
-            return "Stačí zadat pouze název příkazu.";
+            return "Staci zadat pouze nazev prikazu.";
         } else {
            return batoh.obsahBatohu();
         }

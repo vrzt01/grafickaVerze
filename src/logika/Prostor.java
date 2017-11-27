@@ -1,7 +1,13 @@
 package logika;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Map;
+import java.util.HashMap;
 
 /**
  * Trida Prostor - popisuje jednotlivé prostory (místnosti) hry
@@ -23,6 +29,8 @@ public class Prostor {
     private Set<Prostor> vychody;   // obsahuje sousední místnosti
     private Map<String, Vec> veci;
     private Map<String, Postava> postavy;
+    private double left;
+    private double top;
     /**
      * Vytvoření prostoru se zadaným popisem, např. "kuchyň", "chodba"...
      *
@@ -30,10 +38,12 @@ public class Prostor {
      * víceslovný název bez mezer.
      * @param popis Popis prostoru.
      */
-    public Prostor(String nazev, String popis, boolean jeZamceny) {
+    public Prostor(String nazev, String popis, boolean jeZamceny, double left, double top) {
         this.nazev = nazev;
         this.popis = popis;
         this.jeZamceny = jeZamceny;
+        this.left = left;
+        this.top = top;
         vychody = new HashSet<>();
         veci = new HashMap<>();
         postavy = new HashMap<>();
@@ -276,5 +286,30 @@ public class Prostor {
     }
     public String getPopis() {
         return this.popis;
+    }
+
+     public double getLeft() {
+        return left;
+    }
+
+    public double getTop() {
+        return top;
+    }
+
+    public String seznamVychodu() {
+        String vracenyText = "vychody:";
+        for (Prostor sousedni : vychody) {
+             vracenyText += " " + sousedni.getNazev();
+        }
+        return vracenyText;
+    }
+    
+    public Set<Vec> seznamVeciVProstoru () {        
+        Set<Vec> veciVPRostoru = new HashSet<>();
+        for (String nazev : veci.keySet()) {                
+            Vec v = veci.get(nazev);
+            veciVPRostoru.add(v);
+        }
+        return veciVPRostoru;
     }
 }

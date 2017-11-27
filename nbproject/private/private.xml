@@ -3,27 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/Batoh.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/uiText/TextoveRozhrani.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/main/Start.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/test/logika/SeznamPrikazuTest.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/PrikazJdi.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/test/logika/BatohTest.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/Postava.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/test/logika/ProstorTest.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/PrikazProhledat.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/test/logika/HraTest.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/HerniPlan.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/PrikazNapoveda.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/PrikazSeber.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/Vec.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/Prostor.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/SeznamPrikazu.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/Hra.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/PrikazOdhod.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/PrikazKonec.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/IHra.java</file>
-            <file>file:/C:/Users/Tomáš%20Vrzák/Desktop/Java_hra/strasidelnyDum/src/logika/IPrikaz.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/util/SubjektZmenyBatohu.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/main/PanelVychodu.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/util/ObserverBatoh.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/main/ZobrazeniProstoru.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/util/ObserverZmenyProstoru.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/main/main.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/logika/Vec.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/main/OknoBatohu.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/uiText/TextoveRozhrani.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/main/OknoProstoru.java</file>
+            <file>file:/C:/Users/Tomáš%20Vrzák/OneDrive/škola/Softwarko/Java_hra/graficka_verze/strasidelnyDum/strasidelnyDum/src/util/SubjektZmenyProstoru.java</file>
         </group>
     </open-files>
 </project-private>

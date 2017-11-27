@@ -4,6 +4,9 @@ package logika;
 
 
 import java.util.*;
+import util.ObserverBatoh;
+import util.ObserverZmenyProstoru;
+import util.SubjektZmenyBatohu;
 
 /*******************************************************************************
  * Instance třídy Batoh představují ...
@@ -11,9 +14,10 @@ import java.util.*;
   * @author    Tomáš Vrzák
  * @version   LS 2016/17
  */
-public class Batoh
+public class Batoh implements SubjektZmenyBatohu
 {
     private Map<String, Vec> batoh;
+    private List<ObserverBatoh> seznamPozorovatelu;
     //== Konstruktory a tovární metody =============================================
 
     /***************************************************************************
@@ -21,7 +25,8 @@ public class Batoh
      */
     public Batoh ()
     {
-        this.batoh = new HashMap<>(); 
+        this.batoh = new HashMap<>();
+        seznamPozorovatelu = new ArrayList<>();
     }
     
     /**
@@ -83,5 +88,33 @@ public class Batoh
         }
         return vracenyText;
     }
+    
+    public Set<Vec> seznamVeciVBatohu () {        
+        Set<Vec> veci = new HashSet<>();
+        for (String nazev : batoh.keySet()) {                
+            Vec v = batoh.get(nazev);
+            veci.add(v);
+        }
+        return veci;
+    }
+    
+    
+    public void zaregistrujPozorovatele(ObserverBatoh pozorovatel)
+      {
+        seznamPozorovatelu.add(pozorovatel);
+      }
+
+    public void odregistrujPozorovatele(ObserverBatoh pozorovatel)
+      {
+        seznamPozorovatelu.remove(pozorovatel);
+      }
+
+    public void upozorniPozorovatele()
+      {
+        for (ObserverBatoh pozorovatel : seznamPozorovatelu) {
+            pozorovatel.aktualizuj();
+        }
+      }
+    
 }
     

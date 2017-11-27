@@ -68,7 +68,7 @@ public class PrikazOdemkni implements IPrikaz
                         Scanner scanner = new Scanner(System.in);     
 
                         String zadanyKod = scanner.nextLine();
-                        while(!zadanyKod.equals("zpět") == true){
+                        while(!(zadanyKod.equals("zpět"))){
                             if(zadanyKod.length() == 8){
                                 if(zadanyKod.equals(celyKod)){
                                     System.out.print("Jsi v bezpečí! \n");
